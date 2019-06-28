@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct User {
     let name: String
     var age: Int
-    
-    
+    var avatar: UIImage
     
 }

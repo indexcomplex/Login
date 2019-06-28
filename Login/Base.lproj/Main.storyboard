@@ -92,16 +92,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tw8-BQ-BQf">
+                                <rect key="frame" x="132" y="134" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5fE-zd-Z2d"/>
+                                    <constraint firstAttribute="height" constant="150" id="rNo-eR-bFJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="w8c-SS-LCK" firstAttribute="trailing" secondItem="Gtc-ru-4R1" secondAttribute="trailing" constant="88" id="1db-jS-iWT"/>
                             <constraint firstItem="Gtc-ru-4R1" firstAttribute="leading" secondItem="w8c-SS-LCK" secondAttribute="leading" constant="88" id="dJj-rA-Rwo"/>
                             <constraint firstItem="Gtc-ru-4R1" firstAttribute="centerY" secondItem="IDg-Fy-2Um" secondAttribute="centerY" id="g52-VC-oxJ"/>
+                            <constraint firstItem="tw8-BQ-BQf" firstAttribute="top" secondItem="w8c-SS-LCK" secondAttribute="top" constant="90" id="sey-CH-x0U"/>
+                            <constraint firstItem="tw8-BQ-BQf" firstAttribute="centerX" secondItem="IDg-Fy-2Um" secondAttribute="centerX" id="xQd-ae-FFz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w8c-SS-LCK"/>
                     </view>
                     <connections>
+                        <outlet property="avatarView" destination="tw8-BQ-BQf" id="KC2-Pg-eIb"/>
                         <outlet property="greetingLabel" destination="Gtc-ru-4R1" id="XW2-Hj-1ho"/>
                     </connections>
                 </viewController>

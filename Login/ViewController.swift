@@ -32,13 +32,14 @@ let correctPassword = "Password"
         DispatchQueue.main.asyncAfter(deadline: deadLine) {
             print("login")
             
-            let user = User(name: "alan", age: 26)
+            //#imageLiteral(resourceName: "myImage"))
+            let user = User(name: "alan", age: 26, avatar: #imageLiteral(resourceName: "myImage"))
             
             
             
             // call self because we're in a closure
             // call the most immediate thing "object in Class? yes! say self!"
-            self.performSegue(withIdentifier: "segue.Main.loginToMainApp", sender: self.usernameTextfield.text)
+            self.performSegue(withIdentifier: "segue.Main.loginToMainApp", sender: user)
         }
         
         
@@ -69,8 +70,8 @@ let correctPassword = "Password"
         super.prepare(for: segue, sender: sender)
         
         // if desitination is Main App VC we're gonna et it to mainAppVC
-        if let mainAppVC = segue.destination as? MainAppVC, let username = sender as? String {
-            mainAppVC.username = username
+        if let mainAppVC = segue.destination as? MainAppVC, let user = sender as? User {
+            mainAppVC.user = user
             // grabbing username from MainAppVC and setting it to the one created on line 35
         }
         

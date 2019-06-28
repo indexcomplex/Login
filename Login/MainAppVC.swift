@@ -10,11 +10,12 @@ import UIKit
 
 class MainAppVC: UIViewController {
     
+    @IBOutlet weak var avatarView: UIImageView!
     @IBOutlet weak var greetingLabel: UILabel! 
     
     // in order to recieve the usernameText we have to create a var
     
-    var username: String?
+    var user: User?
     
     
     
@@ -23,8 +24,10 @@ class MainAppVC: UIViewController {
         super.viewDidLoad()
         
         // good unwrap
-        guard let unWrappedUsername = username else  {return}
-        greetingLabel.text = "Hello, \(unWrappedUsername)"
+        guard let unWrappedUser = self.user else  {return}
+        
+        avatarView.image = unWrappedUser.avatar
+        greetingLabel.text = "Hello, \(unWrappedUser.name) You are \(unWrappedUser.age)"
 
         
     }
